@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:controller="com.example.queuemanagement.SimulationController" spacing="10" alignment="center" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <Label text="Number of Clients:"/>
+    <TextField fx:id="textNumberOfClients"/>
+    <Label text="Number of Queues:"/>
+    <TextField fx:id="textNumberOfQueues"/>
+    <Label text="Simulation Interval:"/>
+    <TextField fx:id="textSimulationInterval"/>
+    <Label text="Min Arrival Time:"/>
+    <TextField fx:id="textMinArrivalTime"/>
+    <Label text="Max Arrival Time:"/>
+    <TextField fx:id="textMaxArrivalTime"/>
+    <Label text="Min Service Time:"/>
+    <TextField fx:id="textMinServiceTime"/>
+    <Label text="Max Service Time:"/>
+    <TextField fx:id="textMaxServiceTime"/>
+    <HBox spacing="10">
+        <RadioButton fx:id="buttonTime" text="Shortest Time" selected="true"/>
+        <RadioButton fx:id="buttonQueue" text="Shortest Queue"/>
+    </HBox>
+    <Button text="Simulate" onAction="#onSimulate"/>
+</VBox>
